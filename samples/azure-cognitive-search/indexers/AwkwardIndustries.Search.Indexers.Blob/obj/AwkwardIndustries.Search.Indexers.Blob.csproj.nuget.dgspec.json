@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/madmax/src/awkwardindustries/dossier-indexer/samples/azure-cognitive-search/indexers/AwkwardIndustries.Search.Indexers.Blob/AwkwardIndustries.Search.Indexers.Blob.csproj": {}
+  },
+  "projects": {
+    "/home/madmax/src/awkwardindustries/dossier-indexer/samples/azure-cognitive-search/indexers/AwkwardIndustries.Search.Indexers.Blob/AwkwardIndustries.Search.Indexers.Blob.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/madmax/src/awkwardindustries/dossier-indexer/samples/azure-cognitive-search/indexers/AwkwardIndustries.Search.Indexers.Blob/AwkwardIndustries.Search.Indexers.Blob.csproj",
+        "projectName": "AwkwardIndustries.Search.Indexers.Blob",
+        "projectPath": "/home/madmax/src/awkwardindustries/dossier-indexer/samples/azure-cognitive-search/indexers/AwkwardIndustries.Search.Indexers.Blob/AwkwardIndustries.Search.Indexers.Blob.csproj",
+        "packagesPath": "/home/madmax/.nuget/packages/",
+        "outputPath": "/home/madmax/src/awkwardindustries/dossier-indexer/samples/azure-cognitive-search/indexers/AwkwardIndustries.Search.Indexers.Blob/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/madmax/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Search.Documents": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Rest.ClientRuntime.Azure": {
+              "target": "Package",
+              "version": "[3.3.19, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
