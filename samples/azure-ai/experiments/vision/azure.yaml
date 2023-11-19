@@ -1,0 +1,11 @@
+name: image-search-index-with-data
+hooks:
+  preprovision:
+    shell: pwsh
+    run: |
+      dotnet run --project ./hooks/lets-encrypt/
+  postprovision:
+    shell: pwsh
+    run: |
+      dotnet run --project ./hooks/cog-search-index-and-indexer/cog-search-index-and-indexer/
+#services: none yet... really just setting up the image source, 
