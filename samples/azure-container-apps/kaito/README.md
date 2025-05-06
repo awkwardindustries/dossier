@@ -6,19 +6,19 @@ Project Kaito: https://github.com/kaito-project/kaito
 
 Kaito helps automate AI/ML model inferencing workloads in a Kubernetes cluster. The project is supported by an operator to help with provisioning nodes based on model requirements. The project also hosts large model images in the public Microsoft Container Registry (MCR) if the license allows. This in theory supports deployment to ACA. This guide walks through how to deploy a Kaito-managed model image to an Azure Container Apps environment.
 
-### Run the sample
+## Run the sample
 
-#### Deploy the inferencing model image
+### Deploy the inferencing model image
 
 ```bash
 # Assign variables
 
-export RESOURCE_GROUP=rg-aca-kaito
-export LOCATION=westus3
-export CONTAINER_APP_ENV=kaito-tests
-export CONTAINER_APP=kaito-test-app
-export KAITO_MODEL_IMAGE=phi-3.5-mini-instruct
-export KAITO_MODEL_TAG=0.0.2
+RESOURCE_GROUP=rg-aca-kaito
+LOCATION=westus3
+CONTAINER_APP_ENV=kaito-tests
+CONTAINER_APP=kaito-test-app
+KAITO_MODEL_IMAGE=phi-3.5-mini-instruct
+KAITO_MODEL_TAG=0.0.2
 
 # Create the resource group
 
@@ -26,7 +26,10 @@ az group create -n $RESOURCE_GROUP -l $LOCATION
 
 # Create the Azure Container Apps environments
 
-az containerapp env create -n $CONTAINER_APP_ENV -g $RESOURCE_GROUP -l $LOCATION \
+az containerapp env create \
+-n $CONTAINER_APP_ENV \
+-g $RESOURCE_GROUP \
+-l $LOCATION \
 --enable-workload-profiles
 
 # Create the GPU workload profile
@@ -48,7 +51,7 @@ az containerapp create -n $CONTAINER_APP -g $RESOURCE_GROUP \
 --workload-profile-name gpu-consumption
 ```
 
-#### Test the inferencing endpoint
+### Test the inferencing endpoint
 
 ```bash
 # Get the URL
@@ -63,3 +66,4 @@ curl -X POST https://$ENDPOINT_FQDN/v1/completions \
     "propmpt": "Who is Inigo Montoya and from what movie?",
     "temperature": 0
 }'
+```
